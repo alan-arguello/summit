@@ -1,13 +1,12 @@
 import Image from "next/image";
 import {
-  ArrowRight,
   ArrowUpRight,
   CalendarDays,
   Check,
-  MapPin,
   Menu,
   Users,
 } from "lucide-react";
+import { PriceExplorer } from "./components/price-explorer";
 
 const requestAccessHref =
   "mailto:hola@torrenegra.com?subject=Torrenegra%20AI%20Summit%202026";
@@ -43,24 +42,54 @@ const experiences = [
   },
 ];
 
-const accessOptions = [
+const speakers = [
   {
-    name: "Summit",
-    price: "$899",
-    note: "Preventa inicial",
-    description: "El punto de entrada para vivir las conversaciones, los casos y la red del evento.",
+    name: "Alexander Torrenegra",
+    title: "CEO, Torre.ai",
+    image: "/images/speakers/alexander-torrenegra.webp",
+    linkedin: "https://www.linkedin.com/in/alextorrenegra/",
   },
   {
-    name: "Executive Go & See",
-    price: "$5,000",
-    note: "Máximo 20 lugares",
-    description: "Para líderes corporativos que necesitan ver cómo otras organizaciones están actuando.",
+    name: "Tania Zapata",
+    title: "Chairwoman, Bunny Inc.",
+    image: "/images/speakers/tania-zapata.webp",
+    linkedin: "https://www.linkedin.com/in/taniazapata/",
   },
   {
-    name: "Summit + Go & See",
-    price: "$5,750",
-    note: "Máximo 5 lugares",
-    description: "Ambas experiencias, intros relevantes y una sesión personalizada de 60 minutos.",
+    name: "Freddy Vega",
+    title: "CEO & Founder, Platzi",
+    image: "/images/speakers/freddy-vega.webp",
+    linkedin: "https://www.linkedin.com/in/johnfreddyvega/",
+  },
+  {
+    name: "Christian Van Der Henst",
+    title: "Managing Partner, Region Cuatro",
+    image: "/images/speakers/christian-van-der-henst.webp",
+    linkedin: "https://www.linkedin.com/in/cvander/",
+  },
+  {
+    name: "Bismarck Lepe",
+    title: "Co-founder & CEO, MiSalud",
+    image: "/images/speakers/bismarck-lepe.webp",
+    linkedin: "https://www.linkedin.com/in/bismarcklepe/",
+  },
+  {
+    name: "Pilar Manchón",
+    title: "AI Research Strategy, Google",
+    image: "/images/speakers/pilar-manchon.webp",
+    linkedin: "https://www.linkedin.com/in/pilarmanchon/",
+  },
+  {
+    name: "Guillermo Rauch",
+    title: "Founder & CEO, Vercel",
+    image: "/images/speakers/guillermo-rauch.webp",
+    linkedin: "https://www.linkedin.com/in/rauchg/",
+  },
+  {
+    name: "Pamela Valdes",
+    title: "Co-founder & CEO, Musa",
+    image: "/images/speakers/pamela-valdes.webp",
+    linkedin: "https://www.linkedin.com/in/pamelavaldesesteva/",
   },
 ];
 
@@ -90,6 +119,11 @@ const questions = [
     answer:
       "Los primeros anuncios se harán antes de abrir la venta general. Las participaciones se publicarán únicamente cuando estén confirmadas.",
   },
+  {
+    question: "¿Por qué cambia el precio?",
+    answer:
+      "Cada experiencia tiene cupos limitados y requiere planeación anticipada. El precio aumenta por fases conforme se acerca el evento o se agotan los lugares disponibles.",
+  },
 ];
 
 function Header() {
@@ -101,6 +135,7 @@ function Header() {
       </a>
 
       <nav className="desktop-nav" aria-label="Navegación principal">
+        <a href="#speakers">Speakers</a>
         <a href="#experience">Experiencia</a>
         <a href="#access">Acceso</a>
         <a href="#faq">Preguntas</a>
@@ -115,6 +150,7 @@ function Header() {
             <Menu aria-hidden="true" size={22} />
           </summary>
           <nav aria-label="Navegación móvil">
+            <a href="#speakers">Speakers</a>
             <a href="#experience">Experiencia</a>
             <a href="#access">Acceso</a>
             <a href="#faq">Preguntas</a>
@@ -132,8 +168,8 @@ export default function Home() {
       <section className="hero">
         <Image
           className="hero-image"
-          src="/images/hero.webp"
-          alt="Ilustración de un parque con la ciudad de San Francisco al fondo"
+          src="/images/hero-san-francisco.webp"
+          alt="San Francisco al atardecer, con el Golden Gate y un tranvía"
           fill
           priority
           sizes="100vw"
@@ -145,21 +181,14 @@ export default function Home() {
             <CalendarDays size={17} aria-hidden="true" />
             5–11 de octubre de 2026 · Durante SF Tech Week
           </p>
-          <h1>
-            Torrenegra AI Summit
-            <em>Mira de cerca lo que viene.</em>
-          </h1>
+          <h1>Back to the Future Summit</h1>
           <p className="hero-summary">
-            Conversaciones, casos y visitas privadas en San Francisco y Napa para líderes que necesitan decidir qué hacer con IA en su empresa.
+            Conversaciones, casos y visitas privadas para líderes que necesitan decidir qué hacer con IA en su empresa.
           </p>
           <a className="primary-cta" href={requestAccessHref}>
             Solicitar acceso
             <ArrowUpRight size={20} aria-hidden="true" />
           </a>
-        </div>
-        <div className="hero-location">
-          <MapPin size={17} aria-hidden="true" />
-          San Francisco + Napa, California
         </div>
       </section>
 
@@ -208,6 +237,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="speakers-section" id="speakers">
+        <div className="speakers-shell section-shell">
+          <div className="speakers-intro">
+            <h2>Una conversación difícil de reunir en el mismo lugar.</h2>
+            <p>
+              Esta es nuestra primera lista de speakers propuestos. Las participaciones se anunciarán únicamente después de ser confirmadas.
+            </p>
+          </div>
+
+          <div className="speaker-grid">
+            {speakers.map((speaker) => (
+              <a
+                className="speaker-profile"
+                href={speaker.linkedin}
+                key={speaker.name}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Ver el perfil de ${speaker.name} en LinkedIn`}
+              >
+                <div className="speaker-photo">
+                  <Image
+                    src={speaker.image}
+                    alt={speaker.name}
+                    width={760}
+                    height={950}
+                    sizes="(max-width: 760px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="speaker-copy">
+                  <div>
+                    <h3>{speaker.name}</h3>
+                    <ArrowUpRight size={17} aria-hidden="true" />
+                  </div>
+                  <p title={speaker.title}>{speaker.title}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="experience section-shell" id="experience">
         <div className="section-intro">
           <h2>Dos experiencias. Puedes elegir una o vivir ambas.</h2>
@@ -243,6 +313,7 @@ export default function Home() {
 
         <div className="go-see-feature">
           <Image
+            className="go-see-background"
             src="/images/go-see.webp"
             alt="Paisaje abierto bajo un cielo azul"
             fill
@@ -250,9 +321,21 @@ export default function Home() {
           />
           <div className="go-see-overlay" />
           <div className="go-see-content">
-            <p>Executive Go & See</p>
-            <h3>Sal del escenario. Entra al lugar donde se toman las decisiones.</h3>
-            <span>Máximo 20 corporate VPs, managers y C-levels.</span>
+            <div className="go-see-partner">
+              <span>En partnership con</span>
+              <Image
+                src="/images/openai-wordmark.png"
+                alt="OpenAI"
+                width={148}
+                height={46}
+              />
+            </div>
+            <p className="go-see-kicker">Executive Go & See</p>
+            <h3>Como un caso de Harvard, pero dentro de la empresa.</h3>
+            <p className="go-see-description">
+              Una serie de visitas y conversaciones para entender cómo organizaciones de distintas industrias llevaron modelos de IA a la operación: qué problema eligieron, cómo lo implementaron y qué cambió en el área.
+            </p>
+            <span className="go-see-capacity">Máximo 20 corporate VPs, managers y C-levels.</span>
           </div>
         </div>
       </section>
@@ -275,27 +358,9 @@ export default function Home() {
       <section className="access section-shell" id="access">
         <div className="section-intro access-intro">
           <h2>Elige el nivel de acceso</h2>
-          <p>Los precios aumentarán conforme se acerque el evento y se confirmen speakers, aliados y visitas.</p>
+          <p>Compra antes para asegurar el precio más bajo. Cada experiencia aumenta por fases conforme se acerca el evento.</p>
         </div>
-
-        <div className="access-grid">
-          {accessOptions.map((option, index) => (
-            <article className={`access-card${index === 2 ? " access-card-featured" : ""}`} key={option.name}>
-              <div>
-                <p>{option.note}</p>
-                <h3>{option.name}</h3>
-                <span>Desde</span>
-                <strong>{option.price}</strong>
-              </div>
-              <p>{option.description}</p>
-              <a href={requestAccessHref}>
-                Solicitar acceso
-                <ArrowRight size={18} aria-hidden="true" />
-              </a>
-            </article>
-          ))}
-        </div>
-        <p className="access-note">Precios por persona antes de impuestos. Los vuelos no están incluidos.</p>
+        <PriceExplorer />
       </section>
 
       <section className="faq section-shell" id="faq">
