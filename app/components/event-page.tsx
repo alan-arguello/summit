@@ -138,10 +138,10 @@ export function EventPage({ content, locale }: EventPageProps) {
         <div className="hero-wash" />
         <Header content={content} locale={locale} requestAccessHref={requestAccessHref} />
         <div className="hero-content">
-          <p className="event-date">
+          <time className="event-date" dateTime="2026-10-08">
             <CalendarDays size={17} aria-hidden="true" />
             {content.hero.date}
-          </p>
+          </time>
           <h1>{content.hero.title}</h1>
           <p className="hero-summary">{content.hero.summary}</p>
           <a className="primary-cta" href="#experience">
@@ -163,7 +163,9 @@ export function EventPage({ content, locale }: EventPageProps) {
             {content.choice.sequence.days.map((day, index) => (
               <li key={day.name}>
                 <a href={index === 0 ? "#summit" : "#go-see"}>
-                  <time>{day.date}</time>
+                  <time dateTime={index === 0 ? "2026-10-08" : "2026-10-09"}>
+                    {day.date}
+                  </time>
                   <span>
                     <strong>{day.name}</strong>
                     <small>{day.description}</small>
@@ -239,7 +241,9 @@ export function EventPage({ content, locale }: EventPageProps) {
       <section className="summit-section" id="summit">
         <div className="summit-overview section-shell">
           <div className="summit-heading">
-            <p className="experience-date">{content.summit.date}</p>
+            <time className="experience-date" dateTime="2026-10-08">
+              {content.summit.date}
+            </time>
             <h2>{content.summit.title}</h2>
             <p>{content.summit.copy}</p>
           </div>
@@ -297,7 +301,9 @@ export function EventPage({ content, locale }: EventPageProps) {
       <section className="go-see-section" id="go-see">
         <div className="go-see-intro section-shell">
           <div>
-            <p className="experience-date">{content.goSee.date}</p>
+            <time className="experience-date" dateTime="2026-10-09">
+              {content.goSee.date}
+            </time>
             <h2>{content.goSee.title}</h2>
           </div>
           <p>{content.goSee.copy}</p>
@@ -398,7 +404,7 @@ export function EventPage({ content, locale }: EventPageProps) {
       </section>
 
       <section className="closing">
-        <Image src="/images/closing-ascii.png" alt={content.closing.imageAlt} fill sizes="100vw" />
+        <Image src="/images/closing-ascii.jpg" alt={content.closing.imageAlt} fill sizes="100vw" />
         <div className="closing-wash" />
         <div className="closing-content">
           <p>{content.closing.location}</p>

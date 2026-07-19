@@ -11,4 +11,10 @@ npm run dev
 
 ## Vercel
 
-El proyecto no requiere variables de entorno. Vercel detecta Next.js y usa la configuración incluida.
+Vercel detecta Next.js y usa la configuración incluida. Al conectar un dominio propio, define:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://tu-dominio.com
+```
+
+Esta URL se usa para canonicals, `hreflang`, sitemap, robots y datos estructurados. Si no se define, el proyecto utiliza automáticamente `VERCEL_PROJECT_PRODUCTION_URL`.

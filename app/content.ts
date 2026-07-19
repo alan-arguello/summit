@@ -19,9 +19,9 @@ export const content = {
   es: {
     locale: "es" as const,
     metadata: {
-      title: "Back to the Future | San Francisco 2026",
+      title: "Back to the Future 2026 | Summit de IA y Go & See",
       description:
-        "Una experiencia de dos días para entender qué viene con la IA y verla operar dentro de compañías reales.",
+        "Summit de IA el 8 de octubre y Executive Go & See el día 9, durante SF Tech Week. Dos experiencias para líderes en San Francisco y Napa.",
     },
     languageLabel: "EN",
     languageAria: "Ver la página en inglés",
@@ -346,9 +346,9 @@ export const content = {
   en: {
     locale: "en" as const,
     metadata: {
-      title: "Back to the Future | San Francisco 2026",
+      title: "Back to the Future 2026 | AI Summit & Executive Go & See",
       description:
-        "A two-day experience to understand what is next in AI and see it operating inside real companies.",
+        "An AI Summit on October 8 and Executive Go & See on October 9 during SF Tech Week. Two experiences for leaders in San Francisco and Napa.",
     },
     languageLabel: "ES",
     languageAria: "View this page in Spanish",

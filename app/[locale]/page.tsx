@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { EventPage } from "../components/event-page";
 import { content, type Locale } from "../content";
+import { getStructuredData } from "../seo";
 
 const locales: Locale[] = ["es", "en"];
 
@@ -41,6 +42,8 @@ export async function generateMetadata({
     openGraph: {
       title: pageContent.metadata.title,
       description: pageContent.metadata.description,
+      url: `/${locale}`,
+      siteName: "Back to the Future 2026",
       locale: locale === "es" ? "es_MX" : "en_US",
       alternateLocale: locale === "es" ? ["en_US"] : ["es_MX"],
       type: "website",
@@ -52,6 +55,12 @@ export async function generateMetadata({
           alt: "Back to the Future 2026",
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageContent.metadata.title,
+      description: pageContent.metadata.description,
+      images: ["/images/og.webp"],
     },
   };
 }
@@ -67,5 +76,18 @@ export default async function LocalizedPage({
     notFound();
   }
 
-  return <EventPage content={content[locale]} locale={locale} />;
+  const pageContent = content[locale];
+  const structuredData = JSON.stringify(
+    getStructuredData(locale, pageContent),
+  ).replace(/</g, "\\u003c");
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: structuredData }}
+      />
+      <EventPage content={pageContent} locale={locale} />
+    </>
+  );
 }
