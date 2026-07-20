@@ -39,7 +39,7 @@ export const content = {
       techWeekLabel: "Durante",
       title: "Back to the Future",
       summary:
-        "Una experiencia de dos días para entender hacia dónde va la IA y verla funcionar dentro de empresas reales. Solicita acceso al Summit, al Go & See o a ambos.",
+        "Dos días para entender qué está cambiando con la IA y ver cómo empresas reales ya la integraron a su operación. Solicita acceso al Summit, al Go & See o a ambos.",
       cta: "Conocer la experiencia",
       imageAlt: "Vista de San Francisco y el Golden Gate construida con un patrón de datos",
     },
@@ -71,7 +71,7 @@ export const content = {
           name: "Summit",
           promise: "El contexto para entender qué está cambiando.",
           description:
-            "Conversaciones pequeñas con founders, operadores e investigadores sobre casos reales, decisiones difíciles y lo que viene para cada industria.",
+            "Conversaciones pequeñas con fundadores, operadores e investigadores sobre casos reales, decisiones difíciles y lo que viene para cada industria.",
           audienceLabel: "Acceso",
           audience:
             "Por solicitud. Puedes asistir únicamente al Summit o continuar al Go & See.",
@@ -124,29 +124,29 @@ export const content = {
       date: "8 de octubre de 2026",
       title: "Día 1 · Summit: construye el contexto.",
       copy:
-        "Una jornada para conectar perspectiva técnica y decisiones de negocio. Casos concretos, preguntas directas y tiempo para conocer a las personas detrás de las ideas.",
+        "Una jornada para escuchar de primera mano qué están construyendo fundadores, operadores e investigadores, qué ya funciona y qué decisiones están tomando ahora. Conversaciones pequeñas, preguntas directas y tiempo para crear relaciones útiles.",
       facts: [
         "Conversaciones y casos prácticos",
-        "Acceso a speakers y participantes",
+        "Conversaciones con speakers y participantes",
         "Alimentos y bebidas durante el día",
         "Transporte grupal San Francisco–Napa opcional",
       ],
       price: "Desde USD 899",
       speakersTitle: "Una conversación difícil de encontrar en otro lugar.",
       speakersCopy:
-        "Esta es nuestra primera lista de speakers propuestos. Las participaciones se anunciarán únicamente después de ser confirmadas.",
+        "Invitados propuestos para esta edición. Cada participación se anunciará únicamente después de ser confirmada.",
       profileAria: "Ver el perfil de {name} en LinkedIn",
     },
     goSee: {
       date: "9 de octubre de 2026",
       title: "Día 2 · Go & See: entra a la operación.",
       copy:
-        "Desarrollado en colaboración con OpenAI, es una jornada dentro de organizaciones que ya llevaron IA a la operación. Sus equipos abren el proceso: qué los llevó a cambiar, cómo avanzaron, dónde tropezaron y cómo funciona hoy el trabajo.",
+        "Desarrollado en colaboración con OpenAI, el Go & See convierte un caso de estudio en una experiencia en vivo. Entramos a organizaciones que ya integraron IA a su operación para observar cómo cambió el trabajo y hablar con quienes tomaron las decisiones.",
       partner: "En colaboración con",
       imageAlt: "Paisaje tecnológico iluminado sobre colinas verdes",
       featureTitle: "Un caso de estudio en vivo, contado por quienes lo operan.",
       featureDescription:
-        "Una serie de visitas para escuchar directamente a líderes y equipos, observar nuevas formas de trabajo y contrastar lo aprendido con los retos de tu empresa.",
+        "Observa la implementación en su contexto, pregunta por las decisiones difíciles y contrasta qué aprendizajes sí podrían trasladarse a tu empresa.",
       capacity: "Grupo reducido. Acceso por solicitud.",
       steps: [
         {
@@ -239,10 +239,10 @@ export const content = {
           audience:
             "Acceso por solicitud para quienes quieren vivir el recorrido completo.",
           description:
-            "Los dos días consecutivos con precio preferente, presentaciones relevantes y una sesión personalizada de 60 minutos.",
+            "Los dos días consecutivos con precio preferente, introducciones con speakers y aliados, y una sesión personalizada de 60 minutos.",
           includes: [
             "Summit y Go & See",
-            "Presentaciones relevantes",
+            "Introducciones con speakers y aliados",
             "Sesión personalizada de 60 minutos",
           ],
           phases: [
@@ -261,7 +261,7 @@ export const content = {
         {
           question: "¿Cuál es la diferencia entre el Summit y el Go & See?",
           answer:
-            "Son dos días de un mismo recorrido. El Summit construye contexto mediante conversaciones con founders, operadores e investigadores. El Go & See lleva ese contexto a la práctica mediante visitas y conversaciones con organizaciones que ya atravesaron una transformación.",
+            "Son dos días de un mismo recorrido. El Summit construye contexto mediante conversaciones con fundadores, operadores e investigadores. El Go & See lleva ese contexto a la práctica mediante visitas y conversaciones con organizaciones que ya atravesaron una transformación.",
         },
         {
           question: "¿Cuándo ocurre cada experiencia?",
@@ -276,7 +276,7 @@ export const content = {
         {
           question: "¿Qué ocurre durante el Summit?",
           answer:
-            "Es un día de conversaciones, casos y encuentros con founders, ejecutivos, investigadores y builders. El formato busca dejar tiempo para preguntas y relaciones, no llenar la agenda con presentaciones consecutivas.",
+            "Es un día de conversaciones, casos y encuentros con fundadores, ejecutivos, investigadores y personas que están construyendo con IA. El formato busca dejar tiempo para preguntas y relaciones, no llenar la agenda con presentaciones consecutivas.",
         },
         {
           question: "¿Qué ocurre durante el Go & See?",
@@ -345,7 +345,7 @@ export const content = {
       techWeekLabel: "During",
       title: "Back to the Future",
       summary:
-        "A two-day experience to understand where AI is going and see it at work inside real companies. Request access to the Summit, the Go & See, or both.",
+        "Two days to understand what is changing because of AI and see how real companies are putting it to work. Request access to the Summit, the Go & See, or both.",
       cta: "Discover the experience",
       imageAlt: "A view of San Francisco and the Golden Gate Bridge built from a data pattern",
     },
@@ -430,29 +430,29 @@ export const content = {
       date: "October 8, 2026",
       title: "Day 1 · Summit: build the context.",
       copy:
-        "A day connecting technical perspective with business decisions. Concrete cases, direct questions and time to meet the people behind the ideas.",
+        "A day to hear directly from founders, operators and researchers about what they are building, what already works and which decisions they are making now. Small conversations, direct questions and time to build useful relationships.",
       facts: [
         "Conversations and practical cases",
-        "Access to speakers and participants",
+        "Conversations with speakers and participants",
         "Food and beverages throughout the day",
         "Optional group transportation from San Francisco to Napa",
       ],
       price: "From USD 899",
       speakersTitle: "A conversation that is difficult to find anywhere else.",
       speakersCopy:
-        "This is our initial list of proposed speakers. Participation will only be announced once confirmed.",
+        "Proposed guests for this edition. Each participation will only be announced once confirmed.",
       profileAria: "View {name}'s LinkedIn profile",
     },
     goSee: {
       date: "October 9, 2026",
       title: "Day 2 · Go & See: step into the operation.",
       copy:
-        "Developed in partnership with OpenAI, this day takes place inside organizations that have already moved AI into operations. Their teams open up the process: what led them to change, how they progressed, where they struggled and how the work happens today.",
+        "Developed in partnership with OpenAI, the Go & See turns a case study into a live experience. We step inside organizations that have already put AI to work to observe how work changed and speak with the people who made the decisions.",
       partner: "In partnership with",
       imageAlt: "A technological landscape illuminated across green hills",
       featureTitle: "A live case study, told by the people operating it.",
       featureDescription:
-        "A series of visits to hear directly from leaders and teams, observe new ways of working and compare those lessons with the challenges inside your company.",
+        "See the implementation in context, ask about the hard decisions and compare which lessons could transfer to your company.",
       capacity: "Small group. Access by application.",
       steps: [
         {

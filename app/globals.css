@@ -662,7 +662,7 @@ img {
 }
 
 .summit-section {
-  padding: 108px 0 116px;
+  padding: 108px 0 84px;
   border-bottom: 0;
   background: #edf1ed;
 }
@@ -861,7 +861,7 @@ img {
 }
 
 .go-see-section {
-  padding: 108px 0 116px;
+  padding: 84px 0 116px;
   background: #edf1ed;
 }
 
@@ -881,7 +881,7 @@ img {
 .go-see-feature {
   position: relative;
   isolation: isolate;
-  min-height: 360px;
+  min-height: 330px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
@@ -917,11 +917,11 @@ img {
   position: relative;
   z-index: 2;
   display: flex;
-  width: min(100%, 690px);
-  min-height: 360px;
+  width: min(100%, 720px);
+  min-height: 330px;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 30px 44px 34px;
+  justify-content: center;
+  padding: 28px 44px;
 }
 
 .go-see-partner {
@@ -929,7 +929,7 @@ img {
   width: fit-content;
   align-items: center;
   gap: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   padding: 7px 10px;
   border: 1px solid rgba(255, 255, 255, 0.38);
   border-radius: 5px;
@@ -948,17 +948,17 @@ img {
 }
 
 .go-see-content h3 {
-  max-width: 600px;
-  margin-bottom: 16px;
-  font-size: 36px;
+  max-width: 590px;
+  margin-bottom: 14px;
+  font-size: 35px;
   font-weight: 300;
   line-height: 1.1;
   text-wrap: balance;
 }
 
 .go-see-description {
-  max-width: 610px;
-  margin: 0 0 18px;
+  max-width: 590px;
+  margin: 0 0 16px;
   color: rgba(255, 255, 255, 0.86);
   font-size: 14px;
   line-height: 1.58;
@@ -1567,10 +1567,18 @@ footer {
   }
 
   .experience-choice,
-  .summit-section,
-  .go-see-section,
   .access {
     padding-top: 78px;
+    padding-bottom: 84px;
+  }
+
+  .summit-section {
+    padding-top: 78px;
+    padding-bottom: 64px;
+  }
+
+  .go-see-section {
+    padding-top: 64px;
     padding-bottom: 84px;
   }
 
@@ -1723,7 +1731,7 @@ footer {
 
   .go-see-feature,
   .go-see-content {
-    min-height: 380px;
+    min-height: 350px;
   }
 
   .go-see-background {
@@ -1737,8 +1745,8 @@ footer {
   }
 
   .go-see-content {
-    justify-content: flex-start;
-    padding: 20px 22px 24px;
+    justify-content: center;
+    padding: 22px;
   }
 
   .go-see-content h3 {
