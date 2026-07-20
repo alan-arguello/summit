@@ -23,9 +23,9 @@ type PriceExplorerProps = {
 };
 
 export function PriceExplorer({ copy, requestAccessHref, tracks }: PriceExplorerProps) {
-  const trackOrder: Record<PriceTrack["id"], number> = { combined: 0, summit: 1, "go-see": 2 };
+  const trackOrder: Record<PriceTrack["id"], number> = { summit: 0, "go-see": 1, combined: 2 };
   const orderedTracks = [...tracks].sort((a, b) => trackOrder[a.id] - trackOrder[b.id]);
-  const [activeId, setActiveId] = useState<PriceTrack["id"]>("combined");
+  const [activeId, setActiveId] = useState<PriceTrack["id"]>("summit");
   const activeTrack = tracks.find((track) => track.id === activeId) ?? tracks[0];
 
   return (
