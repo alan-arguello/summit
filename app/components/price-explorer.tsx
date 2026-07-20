@@ -23,7 +23,9 @@ type PriceExplorerProps = {
 };
 
 export function PriceExplorer({ copy, requestAccessHref, tracks }: PriceExplorerProps) {
-  const [activeId, setActiveId] = useState<PriceTrack["id"]>("summit");
+  const trackOrder: Record<PriceTrack["id"], number> = { combined: 0, summit: 1, "go-see": 2 };
+  const orderedTracks = [...tracks].sort((a, b) => trackOrder[a.id] - trackOrder[b.id]);
+  const [activeId, setActiveId] = useState<PriceTrack["id"]>("combined");
   const activeTrack = tracks.find((track) => track.id === activeId) ?? tracks[0];
 
   return (
@@ -34,7 +36,7 @@ export function PriceExplorer({ copy, requestAccessHref, tracks }: PriceExplorer
           <p>{copy.subheading}</p>
         </div>
         <div className="price-tabs" role="tablist" aria-label={copy.tabsAria}>
-          {tracks.map((track) => (
+          {orderedTracks.map((track) => (
             <button
               aria-controls={`price-panel-${track.id}`}
               aria-selected={activeTrack.id === track.id}

@@ -129,19 +129,32 @@ export function EventPage({ content, locale }: EventPageProps) {
       <section className="hero">
         <Image
           className="hero-image"
-          src="/images/hero-san-francisco.webp"
+          src="/images/hero-san-francisco-ascii.webp"
           alt={content.hero.imageAlt}
           fill
           priority
           sizes="100vw"
         />
-        <div className="hero-wash" />
         <Header content={content} locale={locale} requestAccessHref={requestAccessHref} />
         <div className="hero-content">
-          <time className="event-date" dateTime="2026-10-08">
-            <CalendarDays size={17} aria-hidden="true" />
-            {content.hero.date}
-          </time>
+          <div className="event-meta">
+            <time className="event-date" dateTime="2026-10-08">
+              <CalendarDays size={17} aria-hidden="true" />
+              {content.hero.date}
+            </time>
+            <span className="event-meta-divider" aria-hidden="true" />
+            <span className="tech-week-lockup">
+              <span>{content.hero.techWeekLabel}</span>
+              <Image
+                className="tech-week-logo"
+                src="/images/sf-tech-week-white.webp"
+                alt="SF Tech Week"
+                width={480}
+                height={270}
+                sizes="72px"
+              />
+            </span>
+          </div>
           <h1>{content.hero.title}</h1>
           <p className="hero-summary">{content.hero.summary}</p>
           <a className="primary-cta" href="#experience">
@@ -157,57 +170,47 @@ export function EventPage({ content, locale }: EventPageProps) {
           <p>{content.choice.copy}</p>
         </div>
 
-        <div className="experience-sequence">
-          <p className="sequence-note">{content.choice.sequence.note}</p>
-          <ol>
-            {content.choice.sequence.days.map((day, index) => (
-              <li key={day.name}>
-                <a href={index === 0 ? "#summit" : "#go-see"}>
-                  <time dateTime={index === 0 ? "2026-10-08" : "2026-10-09"}>
-                    {day.date}
-                  </time>
-                  <span>
-                    <strong>{day.name}</strong>
-                    <small>{day.description}</small>
-                  </span>
-                  <ArrowDown aria-hidden="true" size={17} />
-                </a>
-              </li>
-            ))}
-          </ol>
-          <p className="sequence-purchase">{content.choice.sequence.purchase}</p>
-        </div>
-
-        <div className="choice-grid">
-          {content.choice.tracks.map((track) => (
-            <article className={`choice-track choice-track-${track.id}`} key={track.id}>
-              <div className="choice-image">
+        <div className="experience-journey">
+          <div className="journey-heading">
+            <span>{content.choice.sequence.note}</span>
+            <p>{content.choice.sequence.purchase}</p>
+          </div>
+          <div className="journey-media">
+            {content.choice.tracks.map((track) => (
+              <div className={`journey-image journey-image-${track.id}`} key={track.id}>
                 <Image
                   src={track.image}
                   alt={track.imageAlt}
                   fill
-                  sizes="(max-width: 760px) 100vw, 50vw"
+                  loading="eager"
+                  sizes="(max-width: 760px) 50vw, 560px"
                 />
               </div>
-              <div className="choice-copy">
-                <div className="choice-meta">
-                  <span>{track.number}</span>
-                  <span>{track.meta}</span>
+            ))}
+          </div>
+          <div className="journey-days">
+            {content.choice.tracks.map((track) => (
+              <article className={`journey-day journey-day-${track.id}`} key={track.id}>
+                <div className="journey-day-copy">
+                  <div className="choice-meta">
+                    <span>{track.number}</span>
+                    <span>{track.meta}</span>
+                  </div>
+                  <h3>{track.name}</h3>
+                  <p className="choice-promise">{track.promise}</p>
+                  <p className="choice-description">{track.description}</p>
+                  <p className="choice-audience">
+                    <span>{track.audienceLabel}</span>
+                    {track.audience}
+                  </p>
+                  <a href={track.href}>
+                    {track.link}
+                    <ArrowUpRight aria-hidden="true" size={17} />
+                  </a>
                 </div>
-                <h3>{track.name}</h3>
-                <p className="choice-promise">{track.promise}</p>
-                <p className="choice-description">{track.description}</p>
-                <p className="choice-audience">
-                  <span>{track.audienceLabel}</span>
-                  {track.audience}
-                </p>
-                <a href={track.href}>
-                  {track.link}
-                  <ArrowUpRight aria-hidden="true" size={17} />
-                </a>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -238,7 +241,7 @@ export function EventPage({ content, locale }: EventPageProps) {
         </div>
       </section>
 
-      <section className="summit-section" id="summit">
+      <section className="summit-section program-day program-day-one" id="summit">
         <div className="summit-overview section-shell">
           <div className="summit-heading">
             <time className="experience-date" dateTime="2026-10-08">
@@ -298,7 +301,7 @@ export function EventPage({ content, locale }: EventPageProps) {
         </div>
       </section>
 
-      <section className="go-see-section" id="go-see">
+      <section className="go-see-section program-day program-day-two" id="go-see">
         <div className="go-see-intro section-shell">
           <div>
             <time className="experience-date" dateTime="2026-10-09">
@@ -354,24 +357,6 @@ export function EventPage({ content, locale }: EventPageProps) {
               ))}
             </ul>
             <strong>{content.goSee.price}</strong>
-          </div>
-        </div>
-      </section>
-
-      <section className="audience-section">
-        <div className="section-shell audience-inner">
-          <h2>{content.audience.title}</h2>
-          <div className="audience-tracks">
-            {content.audience.tracks.map((track, index) => (
-              <article key={track.name}>
-                <span>0{index + 1}</span>
-                <h3>{track.name}</h3>
-                <div>
-                  <p>{track.description}</p>
-                  <strong>{track.roles}</strong>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>

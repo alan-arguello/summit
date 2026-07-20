@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   applicationName: "Back to the Future 2026",
   title: "Back to the Future | San Francisco 2026",
   description:
-    "A conversation-driven Summit and an Executive Go & See inside companies transforming with AI.",
+    "A connected two-day AI experience: build context at the Summit, then see the work in practice during the Go & See.",
   authors: [{ name: "Torrenegra & Co", url: "https://www.torrenegra.com" }],
   creator: "Torrenegra & Co",
   publisher: "Torrenegra & Co",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Back to the Future | San Francisco 2026",
     description:
-      "Two experiences for leaders who want to understand AI up close during SF Tech Week.",
+      "One connected two-day experience to understand AI and see it at work during SF Tech Week.",
     type: "website",
     siteName: "Back to the Future 2026",
     url: siteUrl,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Back to the Future | San Francisco 2026",
-    description: "A Summit and an Executive Go & See during SF Tech Week.",
+    description: "A connected Summit and Go & See during SF Tech Week.",
     images: ["/images/og.webp"],
   },
 };

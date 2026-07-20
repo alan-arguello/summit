@@ -19,46 +19,47 @@ export const content = {
   es: {
     locale: "es" as const,
     metadata: {
-      title: "Back to the Future 2026 | Summit de IA y Go & See",
+      title: "Back to the Future 2026 | Una experiencia de IA en San Francisco",
       description:
-        "Summit de IA el 8 de octubre y Executive Go & See el día 9, durante SF Tech Week. Dos experiencias para líderes en San Francisco y Napa.",
+        "Dos días conectados durante SF Tech Week: conversaciones con quienes construyen el futuro de la IA y un Go & See para verla funcionar en empresas reales.",
     },
     languageLabel: "EN",
     languageAria: "Ver la página en inglés",
     requestAccess: "Solicitar acceso",
     requestAccessSubject: "Back to the Future 2026",
     nav: {
-      experiences: "Experiencias",
-      summit: "Summit",
-      goSee: "Go & See",
+      experiences: "Recorrido",
+      summit: "Día 1",
+      goSee: "Día 2",
       access: "Acceso",
       faq: "Preguntas",
     },
     hero: {
-      date: "8–9 de octubre de 2026 · Durante SF Tech Week",
+      date: "8–9 de octubre de 2026",
+      techWeekLabel: "Durante",
       title: "Back to the Future",
       summary:
-        "Dos días consecutivos para entender qué viene con la IA y verlo operar dentro de empresas reales. Elige el Summit, el Go & See o vive ambos.",
-      cta: "Explorar las experiencias",
-      imageAlt: "San Francisco al atardecer, con el Golden Gate y un tranvía",
+        "Una experiencia de dos días para entender hacia dónde va la IA y verla funcionar dentro de empresas reales. Solicita acceso al Summit, al Go & See o a ambos.",
+      cta: "Conocer la experiencia",
+      imageAlt: "Vista de San Francisco y el Golden Gate construida con un patrón de datos",
     },
     choice: {
-      title: "Una experiencia en dos capítulos.",
+      title: "De entender el cambio a verlo en acción.",
       copy:
-        "El Summit abre la conversación el 8 de octubre; el Executive Go & See la lleva a la operación el día 9. Compra un día por separado o vive ambos de principio a fin.",
+        "Back to the Future conecta dos días consecutivos en un mismo recorrido. El 8 de octubre reúne las ideas, casos y personas que están moviendo el mercado. El día 9 lleva esa conversación a organizaciones donde la IA ya forma parte de la operación.",
       sequence: {
-        note: "Diseñados para suceder uno después del otro",
-        purchase: "Elige un día o vive la experiencia completa.",
+        note: "Una experiencia · dos días consecutivos",
+        purchase: "Puedes solicitar acceso a uno o a ambos días.",
         days: [
           {
             date: "8 de octubre",
             name: "Summit",
-            description: "Amplía tu perspectiva y conoce a quienes están construyendo el mercado.",
+            description: "Construye el contexto: qué funciona, qué viene y qué decisiones importan.",
           },
           {
             date: "9 de octubre",
-            name: "Executive Go & See",
-            description: "Entra a la operación y observa cómo otras compañías hicieron el cambio.",
+            name: "Go & See",
+            description: "Entra a la operación y observa cómo otras organizaciones hicieron el cambio.",
           },
         ],
       },
@@ -68,44 +69,44 @@ export const content = {
           number: "01",
           meta: "8 de octubre · Hasta 50 personas",
           name: "Summit",
-          promise: "Entender qué viene y conocer a quienes ya lo están construyendo.",
+          promise: "El contexto para entender qué está cambiando.",
           description:
-            "Una reunión pequeña con founders, operadores e investigadores para hablar de lo que ya funciona, lo que sigue inmaduro y las decisiones que vienen para cada industria.",
-          audienceLabel: "Para",
+            "Conversaciones pequeñas con founders, operadores e investigadores sobre casos reales, decisiones difíciles y lo que viene para cada industria.",
+          audienceLabel: "Acceso",
           audience:
-            "Founders, CEOs, líderes de SMBs, startups, scaleups, gobierno y corporativos.",
-          link: "Explorar el Summit",
+            "Por solicitud. Puedes asistir únicamente al Summit o continuar al Go & See.",
+          link: "Ver el día 1",
           href: "#summit",
-          image: "/images/experience-summit.jpg",
-          imageAlt: "Paisaje abstracto construido con puntos de colores",
+          image: "/images/summit-event.webp",
+          imageAlt: "Asistentes durante una conversación sobre inteligencia artificial en San Francisco",
         },
         {
           id: "go-see",
           number: "02",
-          meta: "9 de octubre · Máximo 20 ejecutivos",
-          name: "Executive Go & See",
-          promise: "Aprender de organizaciones que ya hicieron el recorrido.",
+          meta: "9 de octubre · Máximo 20 personas",
+          name: "Go & See",
+          promise: "La evidencia para ver cómo se hizo.",
           description:
-            "Una experiencia de aprendizaje entre pares para observar el trabajo real y conversar directamente con quienes llevaron IA a la operación.",
-          audienceLabel: "Para",
+            "Visitas y conversaciones privadas con equipos que ya llevaron IA a sus operaciones: qué cambiaron, dónde fallaron y qué funciona hoy.",
+          audienceLabel: "Acceso",
           audience:
-            "Corporate VPs, managers y C-levels responsables de transformar una organización existente.",
-          link: "Explorar el Go & See",
+            "Por solicitud. Puedes asistir únicamente al Go & See o vivir ambos días.",
+          link: "Ver el día 2",
           href: "#go-see",
-          image: "/images/experience-go-see.jpg",
-          imageAlt: "Paisaje construido con puntos de colores",
+          image: "/images/go-and-see-event.webp",
+          imageAlt: "Líderes conversando en un encuentro privado de aprendizaje",
         },
       ],
     },
     premise: {
-      title: "Primero entiendes el cambio. Después lo ves funcionar.",
+      title: "Primero construyes criterio. Después ves la operación.",
       copy:
-        "Los dos días siguen una misma secuencia: escuchar a quienes están construyendo, observar cómo otras compañías operan y contrastar esos aprendizajes con tu empresa.",
+        "No son dos eventos separados. Es una secuencia diseñada para pasar de las ideas y relaciones del Summit a observar decisiones, procesos y equipos en el Go & See.",
       principles: [
         {
           number: "01",
-          title: "Escuchar",
-          text: "Habla directamente con las personas que están construyendo y operando con IA.",
+          title: "Entender",
+          text: "Contrasta perspectivas con las personas que están construyendo y operando con IA.",
         },
         {
           number: "02",
@@ -114,16 +115,16 @@ export const content = {
         },
         {
           number: "03",
-          title: "Contrastar",
-          text: "Lleva cada aprendizaje a la realidad de tu empresa, no a un caso idealizado.",
+          title: "Aplicar",
+          text: "Discute qué aprendizajes sí podrían trasladarse a tu empresa y cuáles no.",
         },
       ],
     },
     summit: {
       date: "8 de octubre de 2026",
-      title: "Summit: una conversación pequeña sobre lo que viene.",
+      title: "Día 1 · Summit: construye el contexto.",
       copy:
-        "Un día para conectar la perspectiva técnica con decisiones de negocio. Sin una sucesión interminable de presentaciones: casos concretos, preguntas directas y tiempo para conocer a las personas detrás de las ideas.",
+        "Una jornada para conectar perspectiva técnica y decisiones de negocio. Casos concretos, preguntas directas y tiempo para conocer a las personas detrás de las ideas.",
       facts: [
         "Conversaciones y casos prácticos",
         "Acceso a speakers y participantes",
@@ -131,22 +132,22 @@ export const content = {
         "Transporte grupal San Francisco–Napa opcional",
       ],
       price: "Desde USD 899",
-      speakersTitle: "Personas que queremos reunir en la misma conversación.",
+      speakersTitle: "Una conversación difícil de encontrar en otro lugar.",
       speakersCopy:
         "Esta es nuestra primera lista de speakers propuestos. Las participaciones se anunciarán únicamente después de ser confirmadas.",
       profileAria: "Ver el perfil de {name} en LinkedIn",
     },
     goSee: {
       date: "9 de octubre de 2026",
-      title: "Executive Go & See: aprende de quienes ya hicieron el recorrido.",
+      title: "Día 2 · Go & See: entra a la operación.",
       copy:
-        "Desarrollado en colaboración con OpenAI, es una jornada de aprendizaje entre pares dentro de organizaciones que ya llevaron IA a la operación. Los equipos anfitriones abren el proceso: qué los llevó a cambiar, cómo avanzaron, dónde tropezaron y cómo funciona hoy el trabajo.",
+        "Desarrollado en colaboración con OpenAI, es una jornada dentro de organizaciones que ya llevaron IA a la operación. Sus equipos abren el proceso: qué los llevó a cambiar, cómo avanzaron, dónde tropezaron y cómo funciona hoy el trabajo.",
       partner: "En colaboración con",
       imageAlt: "Paisaje tecnológico iluminado sobre colinas verdes",
-      featureTitle: "La transformación, contada en el lugar donde ocurrió.",
+      featureTitle: "Un caso de estudio en vivo, contado por quienes lo operan.",
       featureDescription:
         "Una serie de visitas para escuchar directamente a líderes y equipos, observar nuevas formas de trabajo y contrastar lo aprendido con los retos de tu empresa.",
-      capacity: "Máximo 20 corporate VPs, managers y C-levels.",
+      capacity: "Grupo reducido. Acceso por solicitud.",
       steps: [
         {
           number: "01",
@@ -161,40 +162,23 @@ export const content = {
         {
           number: "03",
           title: "Contrastar con tu empresa",
-          text: "Discute con un grupo ejecutivo qué sí podría trasladarse a tu organización y qué no.",
+          text: "Discute con el grupo qué sí podría trasladarse a tu organización y qué no.",
         },
       ],
       facts: [
         "Visitas y conversaciones privadas",
         "Dos noches de hospedaje",
         "Transporte durante la experiencia",
-        "Grupo ejecutivo curado",
+        "Sesiones de contraste entre participantes",
       ],
       price: "Desde USD 5,000",
     },
-    audience: {
-      title: "Dos capítulos conectados, con un grupo ideal para cada uno.",
-      tracks: [
-        {
-          name: "Summit: amplitud y contexto",
-          description:
-            "Quieres ampliar tu perspectiva, conocer a quienes están construyendo el mercado y entender qué oportunidades podrían importar para tu empresa o sector.",
-          roles: "Founders, CEOs, líderes de SMBs, startups, scaleups, gobierno y corporativos.",
-        },
-        {
-          name: "Go & See: profundidad operativa",
-          description:
-            "Ya tienes una organización en marcha y necesitas ver cómo otros líderes convirtieron una idea de IA en cambios reales de operación, talento o producto.",
-          roles: "Corporate VPs, managers y C-levels con responsabilidad de transformación.",
-        },
-      ],
-    },
     access: {
-      title: "Elige un día o vive la experiencia completa.",
+      title: "Solicita acceso a uno o ambos días.",
       copy:
-        "El Summit del 8 de octubre y el Go & See del día 9 se venden por separado. La experiencia completa reúne ambos días con un precio preferente.",
+        "Cada día puede adquirirse por separado. La experiencia completa reúne el Summit y el Go & See con un precio preferente.",
       explorer: {
-        heading: "Selecciona tu experiencia",
+        heading: "Elige tu acceso",
         subheading: "El precio cambia por fecha y disponibilidad.",
         tabsAria: "Tipo de acceso",
         currentPrice: "Precio actual",
@@ -211,7 +195,7 @@ export const content = {
           name: "Summit",
           capacity: "Hasta 50 participantes",
           audience:
-            "Founders, CEOs y líderes de SMBs, startups, scaleups, gobierno y corporativos.",
+            "Acceso por solicitud para cuidar la calidad de las conversaciones.",
           description:
             "Un día de conversaciones, casos y relaciones para entender qué ya funciona y qué conviene hacer ahora.",
           includes: [
@@ -229,10 +213,10 @@ export const content = {
         {
           id: "go-see",
           tab: "Go & See",
-          name: "Executive Go & See",
-          capacity: "Máximo 20 ejecutivos",
+          name: "Go & See",
+          capacity: "Máximo 20 participantes",
           audience:
-            "Corporate VPs, managers y C-levels responsables de transformar una organización existente.",
+            "Acceso por solicitud para cuidar la calidad de las conversaciones.",
           description:
             "Visitas y conversaciones para observar cómo otras compañías llevaron IA a su operación y discutir esas decisiones en contexto.",
           includes: [
@@ -253,7 +237,7 @@ export const content = {
           name: "Summit + Go & See",
           capacity: "Máximo 5 accesos combinados",
           audience:
-            "Líderes que quieren ampliar la conversación en el Summit y después profundizar dentro del grupo ejecutivo.",
+            "Acceso por solicitud para quienes quieren vivir el recorrido completo.",
           description:
             "Los dos días consecutivos con precio preferente, presentaciones relevantes y una sesión personalizada de 60 minutos.",
           includes: [
@@ -277,12 +261,12 @@ export const content = {
         {
           question: "¿Cuál es la diferencia entre el Summit y el Go & See?",
           answer:
-            "Son dos capítulos de un mismo recorrido. El Summit ofrece amplitud: conversaciones con founders, operadores e investigadores, distintos casos y una red más amplia. El Go & See ofrece profundidad: un grupo ejecutivo entra al contexto de compañías que ya atravesaron una transformación para entender cómo ocurrió en la práctica.",
+            "Son dos días de un mismo recorrido. El Summit construye contexto mediante conversaciones con founders, operadores e investigadores. El Go & See lleva ese contexto a la práctica mediante visitas y conversaciones con organizaciones que ya atravesaron una transformación.",
         },
         {
           question: "¿Cuándo ocurre cada experiencia?",
           answer:
-            "El Summit es el jueves 8 de octubre de 2026 y el Executive Go & See es el viernes 9. Están diseñados para suceder uno después del otro, aunque cada día también puede comprarse por separado.",
+            "El Summit es el jueves 8 de octubre de 2026 y el Go & See es el viernes 9. Están diseñados para suceder uno después del otro, aunque cada día también puede comprarse por separado.",
         },
         {
           question: "¿Puedo comprar solo una de las experiencias?",
@@ -300,14 +284,9 @@ export const content = {
             "Visitamos organizaciones anfitrionas para aprender directamente de líderes y equipos que ya atravesaron una transformación. Observamos ejemplos reales del nuevo modo de trabajo, conversamos sobre avances y dificultades, y después contrastamos esos aprendizajes con los retos del grupo.",
         },
         {
-          question: "¿Quién debería asistir al Summit?",
+          question: "¿Quién puede solicitar acceso?",
           answer:
-            "Founders, CEOs y líderes de SMBs, startups, scaleups, gobierno o corporativos que quieren entender hacia dónde se mueve la IA y construir relaciones con quienes ya están trabajando en ella.",
-        },
-        {
-          question: "¿Quién debería solicitar acceso al Go & See?",
-          answer:
-            "Corporate VPs, managers y C-levels responsables de decisiones de operación, talento, producto, tecnología o transformación. Revisaremos cada solicitud para cuidar la composición del grupo y que las conversaciones sean útiles para todos.",
+            "Founders, operadores, investigadores y líderes de empresas, startups, gobierno u otras organizaciones pueden aplicar al Summit, al Go & See o a ambos. Revisaremos cada solicitud para cuidar la calidad y relevancia de las conversaciones.",
         },
         {
           question: "¿Es una conferencia tradicional?",
@@ -346,46 +325,47 @@ export const content = {
   en: {
     locale: "en" as const,
     metadata: {
-      title: "Back to the Future 2026 | AI Summit & Executive Go & See",
+      title: "Back to the Future 2026 | A two-day AI experience in San Francisco",
       description:
-        "An AI Summit on October 8 and Executive Go & See on October 9 during SF Tech Week. Two experiences for leaders in San Francisco and Napa.",
+        "Two connected days during SF Tech Week: conversations with the people building the future of AI and a Go & See to observe it at work inside real companies.",
     },
     languageLabel: "ES",
     languageAria: "View this page in Spanish",
     requestAccess: "Request access",
     requestAccessSubject: "Back to the Future 2026",
     nav: {
-      experiences: "Experiences",
-      summit: "Summit",
-      goSee: "Go & See",
+      experiences: "Journey",
+      summit: "Day 1",
+      goSee: "Day 2",
       access: "Access",
       faq: "FAQ",
     },
     hero: {
-      date: "October 8–9, 2026 · During SF Tech Week",
+      date: "October 8–9, 2026",
+      techWeekLabel: "During",
       title: "Back to the Future",
       summary:
-        "Two consecutive days to understand what is next in AI and see it operating inside real companies. Choose the Summit, the Go & See, or experience both.",
-      cta: "Explore the experiences",
-      imageAlt: "San Francisco at sunset, with the Golden Gate Bridge and a cable car",
+        "A two-day experience to understand where AI is going and see it at work inside real companies. Request access to the Summit, the Go & See, or both.",
+      cta: "Discover the experience",
+      imageAlt: "A view of San Francisco and the Golden Gate Bridge built from a data pattern",
     },
     choice: {
-      title: "One experience in two chapters.",
+      title: "From understanding the change to seeing it in action.",
       copy:
-        "The Summit opens the conversation on October 8; the Executive Go & See takes it into operations on the 9th. Buy either day on its own or experience both from beginning to end.",
+        "Back to the Future connects two consecutive days in one journey. October 8 brings together the ideas, cases and people moving the market. On October 9, that conversation moves inside organizations where AI is already part of the operation.",
       sequence: {
-        note: "Designed to happen one after the other",
-        purchase: "Choose one day or experience the full journey.",
+        note: "One experience · two consecutive days",
+        purchase: "Request access to either day or both.",
         days: [
           {
             date: "October 8",
             name: "Summit",
-            description: "Broaden your perspective and meet the people building the market.",
+            description: "Build the context: what works, what is next and which decisions matter.",
           },
           {
             date: "October 9",
-            name: "Executive Go & See",
-            description: "Step into operations and observe how other companies made the change.",
+            name: "Go & See",
+            description: "Step into operations and observe how other organizations made the change.",
           },
         ],
       },
@@ -395,44 +375,44 @@ export const content = {
           number: "01",
           meta: "October 8 · Up to 50 people",
           name: "Summit",
-          promise: "Understand what is coming and meet the people already building it.",
+          promise: "The context to understand what is changing.",
           description:
-            "A small gathering of founders, operators and researchers to discuss what already works, what remains immature and the decisions every industry will face next.",
-          audienceLabel: "For",
+            "Small conversations with founders, operators and researchers about real cases, difficult decisions and what comes next for each industry.",
+          audienceLabel: "Access",
           audience:
-            "Founders, CEOs, and leaders across SMBs, startups, scaleups, government and corporations.",
-          link: "Explore the Summit",
+            "By application. Attend the Summit on its own or continue into the Go & See.",
+          link: "See day 1",
           href: "#summit",
-          image: "/images/experience-summit.jpg",
-          imageAlt: "Abstract landscape built from colored points",
+          image: "/images/summit-event.webp",
+          imageAlt: "Attendees during an artificial intelligence conversation in San Francisco",
         },
         {
           id: "go-see",
           number: "02",
-          meta: "October 9 · Up to 20 executives",
-          name: "Executive Go & See",
-          promise: "Learn from organizations that have already made the journey.",
+          meta: "October 9 · Up to 20 people",
+          name: "Go & See",
+          promise: "The evidence to see how it was done.",
           description:
-            "A peer-learning experience to observe the work itself and speak directly with the people who moved AI into operations.",
-          audienceLabel: "For",
+            "Private visits and conversations with teams that moved AI into operations: what changed, where they struggled and what works today.",
+          audienceLabel: "Access",
           audience:
-            "Corporate VPs, managers and C-level leaders responsible for transforming an existing organization.",
-          link: "Explore the Go & See",
+            "By application. Attend the Go & See on its own or experience both days.",
+          link: "See day 2",
           href: "#go-see",
-          image: "/images/experience-go-see.jpg",
-          imageAlt: "Landscape built from colored points",
+          image: "/images/go-and-see-event.webp",
+          imageAlt: "Leaders in a private peer-learning conversation",
         },
       ],
     },
     premise: {
-      title: "First understand the change. Then see it at work.",
+      title: "First build judgment. Then see the operation.",
       copy:
-        "Both days follow the same sequence: hear from the people building, observe how other companies operate and compare those lessons with your own organization.",
+        "These are not two separate events. The sequence moves from the ideas and relationships of the Summit to observing decisions, processes and teams during the Go & See.",
       principles: [
         {
           number: "01",
-          title: "Listen",
-          text: "Speak directly with the people building and operating with AI.",
+          title: "Understand",
+          text: "Compare perspectives with the people building and operating with AI.",
         },
         {
           number: "02",
@@ -441,16 +421,16 @@ export const content = {
         },
         {
           number: "03",
-          title: "Compare",
-          text: "Bring each lesson back to the reality of your company, not an idealized case.",
+          title: "Apply",
+          text: "Discuss which lessons could transfer to your company and which could not.",
         },
       ],
     },
     summit: {
       date: "October 8, 2026",
-      title: "Summit: a small conversation about what comes next.",
+      title: "Day 1 · Summit: build the context.",
       copy:
-        "One day connecting technical perspective with business decisions. No endless sequence of presentations: concrete cases, direct questions and time to meet the people behind the ideas.",
+        "A day connecting technical perspective with business decisions. Concrete cases, direct questions and time to meet the people behind the ideas.",
       facts: [
         "Conversations and practical cases",
         "Access to speakers and participants",
@@ -458,22 +438,22 @@ export const content = {
         "Optional group transportation from San Francisco to Napa",
       ],
       price: "From USD 899",
-      speakersTitle: "People we want in the same conversation.",
+      speakersTitle: "A conversation that is difficult to find anywhere else.",
       speakersCopy:
         "This is our initial list of proposed speakers. Participation will only be announced once confirmed.",
       profileAria: "View {name}'s LinkedIn profile",
     },
     goSee: {
       date: "October 9, 2026",
-      title: "Executive Go & See: learn from those who made the journey.",
+      title: "Day 2 · Go & See: step into the operation.",
       copy:
-        "Developed in partnership with OpenAI, this is a day of peer learning inside organizations that have already moved AI into operations. Host teams open up the process: what led them to change, how they progressed, where they struggled and how the work happens today.",
+        "Developed in partnership with OpenAI, this day takes place inside organizations that have already moved AI into operations. Their teams open up the process: what led them to change, how they progressed, where they struggled and how the work happens today.",
       partner: "In partnership with",
       imageAlt: "A technological landscape illuminated across green hills",
-      featureTitle: "The transformation, told where it happened.",
+      featureTitle: "A live case study, told by the people operating it.",
       featureDescription:
         "A series of visits to hear directly from leaders and teams, observe new ways of working and compare those lessons with the challenges inside your company.",
-      capacity: "Up to 20 corporate VPs, managers and C-level leaders.",
+      capacity: "Small group. Access by application.",
       steps: [
         {
           number: "01",
@@ -488,41 +468,23 @@ export const content = {
         {
           number: "03",
           title: "Compare it with your company",
-          text: "Discuss with a curated executive group what could transfer to your organization and what could not.",
+          text: "Discuss with the group what could transfer to your organization and what could not.",
         },
       ],
       facts: [
         "Private visits and conversations",
         "Two hotel nights",
         "Transportation throughout the experience",
-        "Curated executive group",
+        "Peer discussion sessions",
       ],
       price: "From USD 5,000",
     },
-    audience: {
-      title: "Two connected chapters, each designed for a different group.",
-      tracks: [
-        {
-          name: "Summit: breadth and context",
-          description:
-            "You want a broader perspective, access to people building the market and a clearer view of which opportunities could matter to your company or industry.",
-          roles:
-            "Founders, CEOs, and leaders across SMBs, startups, scaleups, government and corporations.",
-        },
-        {
-          name: "Go & See: operational depth",
-          description:
-            "You already run an organization and need to see how other leaders turned an AI idea into real changes across operations, talent or product.",
-          roles: "Corporate VPs, managers and C-level leaders responsible for transformation.",
-        },
-      ],
-    },
     access: {
-      title: "Choose one day or experience the full journey.",
+      title: "Request access to either day or both.",
       copy:
-        "The October 8 Summit and the October 9 Go & See are sold separately. The full experience brings both days together at a preferred price.",
+        "Each day can be purchased separately. The full experience brings the Summit and Go & See together at a preferred price.",
       explorer: {
-        heading: "Select your experience",
+        heading: "Choose your access",
         subheading: "Pricing changes by date and availability.",
         tabsAria: "Access type",
         currentPrice: "Current price",
@@ -539,7 +501,7 @@ export const content = {
           name: "Summit",
           capacity: "Up to 50 participants",
           audience:
-            "Founders, CEOs, and leaders across SMBs, startups, scaleups, government and corporations.",
+            "Access by application to protect the quality of the conversations.",
           description:
             "One day of conversations, cases and relationships to understand what already works and what is worth doing now.",
           includes: [
@@ -557,10 +519,10 @@ export const content = {
         {
           id: "go-see",
           tab: "Go & See",
-          name: "Executive Go & See",
-          capacity: "Up to 20 executives",
+          name: "Go & See",
+          capacity: "Up to 20 participants",
           audience:
-            "Corporate VPs, managers and C-level leaders responsible for transforming an existing organization.",
+            "Access by application to protect the quality of the conversations.",
           description:
             "Visits and conversations to observe how other companies brought AI into operations and discuss those decisions in context.",
           includes: [
@@ -581,7 +543,7 @@ export const content = {
           name: "Summit + Go & See",
           capacity: "Up to 5 combined passes",
           audience:
-            "Leaders who want to broaden the conversation at the Summit, then go deeper with the executive group.",
+            "Access by application for those who want to experience the full journey.",
           description:
             "Both consecutive days at a preferred price, relevant introductions and a personalized 60-minute session.",
           includes: [
@@ -605,12 +567,12 @@ export const content = {
         {
           question: "What is the difference between the Summit and the Go & See?",
           answer:
-            "They are two chapters of the same journey. The Summit offers breadth: conversations with founders, operators and researchers, a range of cases and a broader network. The Go & See offers depth: a small executive group steps into the context of companies that have already gone through a transformation to understand how it happened in practice.",
+            "They are two days in the same journey. The Summit builds context through conversations with founders, operators and researchers. The Go & See takes that context into practice through visits and conversations with organizations that have already gone through a transformation.",
         },
         {
           question: "When does each experience take place?",
           answer:
-            "The Summit takes place on Thursday, October 8, 2026, followed by the Executive Go & See on Friday, October 9. They are designed to happen back to back, although each day can also be purchased separately.",
+            "The Summit takes place on Thursday, October 8, 2026, followed by the Go & See on Friday, October 9. They are designed to happen back to back, although each day can also be purchased separately.",
         },
         {
           question: "Can I purchase only one experience?",
@@ -628,14 +590,9 @@ export const content = {
             "We visit host organizations to learn directly from leaders and teams that have already gone through a transformation. We observe live examples of the new way of working, discuss progress and challenges, and then compare those lessons with the needs of the group.",
         },
         {
-          question: "Who should attend the Summit?",
+          question: "Who can request access?",
           answer:
-            "Founders, CEOs, and leaders across SMBs, startups, scaleups, government or corporations who want to understand where AI is heading and build relationships with people already working on it.",
-        },
-        {
-          question: "Who should request access to the Go & See?",
-          answer:
-            "Corporate VPs, managers and C-level leaders responsible for decisions across operations, talent, product, technology or transformation. We review each request to protect the quality and relevance of the group.",
+            "Founders, operators, researchers and leaders across companies, startups, government or other organizations can apply to the Summit, the Go & See or both. We review each request to protect the quality and relevance of the conversations.",
         },
         {
           question: "Is this a traditional conference?",

@@ -100,7 +100,7 @@ export function getStructuredData(locale: Locale, content: EventContent) {
   const goSee = {
     "@type": "BusinessEvent",
     "@id": `${pageUrl}#go-see-event`,
-    name: "Back to the Future Executive Go & See 2026",
+    name: "Back to the Future Go & See 2026",
     description: content.goSee.copy,
     startDate: "2026-10-09",
     endDate: "2026-10-09",
