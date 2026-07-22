@@ -7,14 +7,14 @@ const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "Back to the Future 2026",
-  title: "Back to the Future | San Francisco 2026",
+  applicationName: "Becoming AI Native Retreat",
+  title: "Becoming AI Native | Private retreat in Napa Valley",
   description:
-    "A connected two-day AI experience: build context at the Summit, then see the work in practice during the Go & See.",
+    "A private two-day retreat to understand what AI is changing, see it across industries and apply it to a real situation inside your organization.",
   authors: [{ name: "Torrenegra & Co", url: "https://www.torrenegra.com" }],
   creator: "Torrenegra & Co",
   publisher: "Torrenegra & Co",
-  category: "Business and technology event",
+  category: "Executive education and technology event",
   referrer: "origin-when-cross-origin",
   formatDetection: {
     address: false,
@@ -33,18 +33,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Back to the Future | San Francisco 2026",
+    title: "Becoming AI Native | Private retreat in Napa Valley",
     description:
-      "One connected two-day experience to understand AI and see it at work during SF Tech Week.",
+      "Two days in Napa to understand what AI is changing, learn across industries and apply that perspective to your organization.",
     type: "website",
-    siteName: "Back to the Future 2026",
+    siteName: "Becoming AI Native Retreat",
     url: siteUrl,
-    images: [{ url: "/images/og.webp", width: 1200, height: 630, alt: "Back to the Future in San Francisco" }],
+    images: [{ url: "/images/og.webp", width: 1200, height: 630, alt: "Becoming AI Native Retreat in Napa Valley" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Back to the Future | San Francisco 2026",
-    description: "A connected Summit and Go & See during SF Tech Week.",
+    title: "Becoming AI Native | Private retreat in Napa Valley",
+    description: "Learn what is changing across companies and industries, then apply that perspective to one real case of your own.",
     images: ["/images/og.webp"],
   },
 };

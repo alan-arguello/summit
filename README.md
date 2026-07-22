@@ -1,20 +1,25 @@
-# Torrenegra AI Summit
+# Becoming AI Native Retreat
 
-Landing page en Next.js para el Summit y Executive Go & See de Torrenegra & Co durante SF Tech Week 2026.
+Bilingual Next.js website for Torrenegra & Co's private AI working retreat in Napa Valley on October 5-6, 2026.
 
-## Desarrollo
+## Local development
 
 ```bash
-npm install
 npm run dev
 ```
 
-## Vercel
-
-Vercel detecta Next.js y usa la configuración incluida. Al conectar un dominio propio, define:
+## Production build
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://tu-dominio.com
+npm run build
 ```
 
-Esta URL se usa para canonicals, `hreflang`, sitemap, robots y datos estructurados. Si no se define, el proyecto utiliza automáticamente `VERCEL_PROJECT_PRODUCTION_URL`.
+## Deployment
+
+The project is configured for Vercel. Set these environment variables in every deployment environment:
+
+- `NEXT_PUBLIC_SITE_URL`: production domain used by canonical URLs, the sitemap and structured data.
+- `SUPABASE_URL`: the same Supabase project URL used by Consulting Website.
+- `SUPABASE_SECRET_KEY`: a server-only secret key for that Supabase project. Never expose it with a `NEXT_PUBLIC_` prefix.
+
+The application form writes to `public.ai_native_retreat_applications`. Its migration is stored in `supabase/migrations` and the table is protected with RLS; only the server-side Supabase role receives table privileges.

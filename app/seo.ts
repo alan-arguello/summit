@@ -37,100 +37,38 @@ const organization = {
   },
 };
 
-const locations = [
+const location = {
+  "@type": "Place",
+  name: "Alex Torrenegra's private residence in Napa Valley",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Napa",
+    addressRegion: "CA",
+    addressCountry: "US",
+  },
+};
+
+const hosts = [
   {
-    "@type": "Place",
-    name: "San Francisco Bay Area",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "San Francisco",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
+    "@type": "Person",
+    name: "Alexander Torrenegra",
+    url: "https://www.linkedin.com/in/alextorrenegra/",
   },
   {
-    "@type": "Place",
-    name: "Napa Valley",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Napa",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
+    "@type": "Person",
+    name: "Tania Zapata",
+    url: "https://www.linkedin.com/in/taniazapata/",
+  },
+  {
+    "@type": "Person",
+    name: "Alan Arguello",
+    url: "https://www.linkedin.com/in/alan-arguello/",
   },
 ];
 
 export function getStructuredData(locale: Locale, content: EventContent) {
   const pageUrl = absoluteUrl(`/${locale}`);
   const imageUrl = absoluteUrl("/images/og.webp");
-  const isSpanish = locale === "es";
-
-  const summit = {
-    "@type": "BusinessEvent",
-    "@id": `${pageUrl}#summit-event`,
-    name: isSpanish
-      ? "Back to the Future Summit 2026"
-      : "Back to the Future Summit 2026",
-    description: content.summit.copy,
-    startDate: "2026-10-08",
-    endDate: "2026-10-08",
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: locations,
-    image: [imageUrl],
-    url: `${pageUrl}#summit`,
-    organizer: { "@id": organization["@id"] },
-    inLanguage: locale,
-    maximumAttendeeCapacity: 50,
-    audience: {
-      "@type": "BusinessAudience",
-      audienceType: content.access.tracks[0].audience,
-    },
-    offers: {
-      "@type": "Offer",
-      name: content.access.tracks[0].phases[0].name,
-      url: `${pageUrl}#access`,
-      price: "899",
-      priceCurrency: "USD",
-      priceValidUntil: "2026-08-01",
-      availability: "https://schema.org/LimitedAvailability",
-    },
-  };
-
-  const goSee = {
-    "@type": "BusinessEvent",
-    "@id": `${pageUrl}#go-see-event`,
-    name: "Back to the Future Go & See 2026",
-    description: content.goSee.copy,
-    startDate: "2026-10-09",
-    endDate: "2026-10-09",
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: locations[0],
-    image: [imageUrl],
-    url: `${pageUrl}#go-see`,
-    organizer: { "@id": organization["@id"] },
-    contributor: {
-      "@type": "Organization",
-      name: "OpenAI",
-      url: "https://openai.com",
-    },
-    inLanguage: locale,
-    maximumAttendeeCapacity: 20,
-    audience: {
-      "@type": "BusinessAudience",
-      audienceType: content.access.tracks[1].audience,
-    },
-    offers: {
-      "@type": "Offer",
-      name: content.access.tracks[1].phases[0].name,
-      url: `${pageUrl}#access`,
-      price: "5000",
-      priceCurrency: "USD",
-      priceValidUntil: "2026-08-01",
-      availability: "https://schema.org/LimitedAvailability",
-    },
-  };
 
   return {
     "@context": "https://schema.org",
@@ -140,7 +78,7 @@ export function getStructuredData(locale: Locale, content: EventContent) {
         "@type": "WebSite",
         "@id": `${getSiteUrl()}/#website`,
         url: getSiteUrl(),
-        name: "Back to the Future 2026",
+        name: "Becoming AI Native Retreat",
         publisher: { "@id": organization["@id"] },
         inLanguage: ["es", "en"],
       },
@@ -163,24 +101,33 @@ export function getStructuredData(locale: Locale, content: EventContent) {
       {
         "@type": "BusinessEvent",
         "@id": `${pageUrl}#event`,
-        name: "Back to the Future 2026",
+        name: "Becoming AI Native Retreat 2026",
         description: content.metadata.description,
-        startDate: "2026-10-08",
-        endDate: "2026-10-09",
+        startDate: "2026-10-05T11:00:00-07:00",
+        endDate: "2026-10-06T17:30:00-07:00",
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-        location: locations,
+        location,
         image: [imageUrl],
         url: pageUrl,
         organizer: { "@id": organization["@id"] },
+        performer: hosts,
         inLanguage: locale,
-        subEvent: [
-          { "@id": summit["@id"] },
-          { "@id": goSee["@id"] },
-        ],
+        maximumAttendeeCapacity: 50,
+        audience: {
+          "@type": "BusinessAudience",
+          audienceType: content.access.copy,
+        },
+        offers: {
+          "@type": "AggregateOffer",
+          url: `${pageUrl}#access`,
+          lowPrice: "1450",
+          highPrice: "2450",
+          priceCurrency: "USD",
+          offerCount: "4",
+          availability: "https://schema.org/LimitedAvailability",
+        },
       },
-      summit,
-      goSee,
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}#faq-schema`,
